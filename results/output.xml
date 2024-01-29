@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0 (Python 3.12.1 on win32)" generated="2024-01-29T14:39:00.418806" rpa="false" schemaversion="5">
+<suite id="s1" name="64024365" source="C:\Users\User\Documents\64024365">
+<suite id="s1-s1" name="preTest" source="C:\Users\User\Documents\64024365\preTest.robot">
+<kw name="Open Browser" owner="SeleniumLibrary" type="SETUP">
+<msg time="2024-01-29T14:39:00.522123" level="INFO">Opening browser 'chrome' to base url 'https://automationexercise.com/'.</msg>
+<arg>https://automationexercise.com/</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-01-29T14:39:00.522123" elapsed="5.277846"/>
+</kw>
+<test id="s1-s1-t1" name="Search Product" line="28">
+<kw name="Click Products Element">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-01-29T14:39:05.802326" level="INFO">Clicking element '//*[@id="header"]/div/div/div/div[2]/div/ul/li[2]/a'.</msg>
+<arg>//*[@id="header"]/div/div/div/div[2]/div/ul/li[2]/a</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-01-29T14:39:05.801320" elapsed="2.138807"/>
+</kw>
+<status status="PASS" start="2024-01-29T14:39:05.801320" elapsed="2.138807"/>
+</kw>
+<kw name="Get WebElements" owner="SeleniumLibrary">
+<msg time="2024-01-29T14:39:07.947071" level="INFO">${elements} = []</msg>
+<var>${elements}</var>
+<arg>/html/body/section[2]/div/div/div[2]/div/h2</arg>
+<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
+<status status="PASS" start="2024-01-29T14:39:07.940127" elapsed="0.006944"/>
+</kw>
+<for flavor="IN">
+<iter>
+<kw name="Element Should Contain" owner="SeleniumLibrary">
+<arg>${elements}</arg>
+<arg>${VerifyWord1}</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<status status="NOT RUN" start="2024-01-29T14:39:07.948072" elapsed="0.000000"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<arg>Verify user is navigated to ALL PRODUCTS page successfully</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" start="2024-01-29T14:39:07.949068" elapsed="0.000000"/>
+</kw>
+<var name="${elements}"/>
+<status status="NOT RUN" start="2024-01-29T14:39:07.948072" elapsed="0.000996"/>
+</iter>
+<var>${elements}</var>
+<value>@{elements}</value>
+<status status="NOT RUN" start="2024-01-29T14:39:07.947071" elapsed="0.001997"/>
+</for>
+<kw name="Input Search Product">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-01-29T14:39:07.950068" level="INFO">Typing text 'dress' into text field '//*[@id="search_product"]'.</msg>
+<arg>//*[@id="search_product"]</arg>
+<arg>${product}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-01-29T14:39:07.949068" elapsed="0.046003"/>
+</kw>
+<arg>${product}</arg>
+<status status="PASS" start="2024-01-29T14:39:07.949068" elapsed="0.046003"/>
+</kw>
+<kw name="Click Search Button Element">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-01-29T14:39:07.996071" level="INFO">Clicking button '//*[@id="submit_search"]'.</msg>
+<arg>//*[@id="submit_search"]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-01-29T14:39:07.995071" elapsed="1.709953"/>
+</kw>
+<status status="PASS" start="2024-01-29T14:39:07.995071" elapsed="1.709953"/>
+</kw>
+<kw name="Get WebElements" owner="SeleniumLibrary">
+<msg time="2024-01-29T14:39:09.712024" level="INFO">${elements} = []</msg>
+<var>${elements}</var>
+<arg>/html/body/section[2]/div/div/div[2]/div/h2</arg>
+<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
+<status status="PASS" start="2024-01-29T14:39:09.706024" elapsed="0.006000"/>
+</kw>
+<for flavor="IN">
+<iter>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<arg>${elements}</arg>
+<arg>${VerifyWord2}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="NOT RUN" start="2024-01-29T14:39:09.713024" elapsed="0.000000"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<arg>Verify 'SEARCHED PRODUCTS' is visible</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" start="2024-01-29T14:39:09.713024" elapsed="0.000000"/>
+</kw>
+<var name="${elements}"/>
+<status status="NOT RUN" start="2024-01-29T14:39:09.712024" elapsed="0.001000"/>
+</iter>
+<var>${elements}</var>
+<value>@{elements}</value>
+<status status="NOT RUN" start="2024-01-29T14:39:09.712024" elapsed="0.001000"/>
+</for>
+<doc>Test the login functionality with valid credentials</doc>
+<status status="PASS" start="2024-01-29T14:39:05.800969" elapsed="3.912055"/>
+</test>
+<doc>This is a sample test suite using Robot Framework</doc>
+<status status="PASS" start="2024-01-29T14:39:00.432806" elapsed="9.282218"/>
+</suite>
+<status status="PASS" start="2024-01-29T14:39:00.420809" elapsed="9.296215"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="64024365">64024365</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1" name="preTest">64024365.preTest</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
